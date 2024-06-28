@@ -1,4 +1,4 @@
-import 'package:codev_ball/src/game.dart';
+import 'package:codev_ball/src/ball_game.dart';
 import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
 

@@ -25,7 +25,7 @@ https://github.com/rirjkl19/codev_ball/assets/20448341/a833d5d1-3f8a-4844-a220-7
 
 - [x] Upon clicking the screen, a new ball should spawn at the click location and
 move in a random direction.
-- [x] Balls should move at a constant speed.
+- [x] ~~Balls should move at a constant speed.~~ (_edit: I misunderstood this, hoping current implementation is acceptable. Will update the repository in earliest free time_)
 
 ### Collisions
 

@@ -1,16 +1,32 @@
 # codev_ball
 
-A new Flutter project.
+A flutter flame project I created for CoDev
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+A flutter flame project that spawns a ball and have it bounce around the screen.
 
-A few resources to get you started if this is your first Flutter project:
+## Screenshots
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Criteria
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Screen Interaction
+
+- [x] The player should be able to create a small ball by clicking on the screen.
+
+### Ball Behavior
+
+- [x] Upon clicking the screen, a new ball should spawn at the click location and
+move in a random direction.
+- [x] Balls should move at a constant speed.
+
+### Collisions
+
+- [x] If two balls collide, both should change their direction to the opposite.
+
+- [x] Collision detection should work correctly even with multiple balls on the
+screen.
+
+### Removing Balls
+
+- [x] If a ball moves outside the screen, it should be removed from the game.

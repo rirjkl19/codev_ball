@@ -13,11 +13,11 @@ class Ball extends PositionComponent with HasGameRef<BallGame>, CollisionCallbac
   final radius = 10.0;
   final speed = 50.0;
 
-  late Vector2 direction = (Vector2.random() - Vector2.random()).normalized() * speed;
+  late Vector2 velocity = Vector2.random() * speed;
 
   @override
   FutureOr<void> onLoad() {
-    print('Ball loaded $hashCode');
+    debugPrint('Ball loaded $hashCode');
     position = initialPosition;
     anchor = Anchor.center;
     size = Vector2.all(radius);
@@ -30,23 +30,24 @@ class Ball extends PositionComponent with HasGameRef<BallGame>, CollisionCallbac
 
   @override
   void update(double dt) {
-    super.update(dt);
-    position += direction * dt;
+    position += velocity * dt;
     _removeOnScreenEdge();
+    super.update(dt);
   }
 
   @override
   void onCollision(Set<Vector2> intersectionPoints, PositionComponent other) {
+    super.onCollision(intersectionPoints, other);
     if (other is Ball) {
-      direction += (position - other.position).normalized() * 10;
-      other.direction -= (position - other.position).normalized() * 10;
+      final newDirection = (position - other.position).normalized();
+      velocity = newDirection * speed;
+      other.velocity = -newDirection * speed;
     }
-    return super.onCollision(intersectionPoints, other);
   }
 
   @override
   void onRemove() {
-    print('Ball removed $hashCode');
+    debugPrint('Ball removed $hashCode');
     super.onRemove();
   }
 

@@ -38,9 +38,8 @@ class Ball extends PositionComponent with HasGameRef<BallGame>, CollisionCallbac
   @override
   void onCollision(Set<Vector2> intersectionPoints, PositionComponent other) {
     if (other is Ball) {
-      print('Collision between $hashCode and ${other.hashCode}');
-      removeFromParent();
-      other.removeFromParent();
+      direction += (position - other.position).normalized() * 10;
+      other.direction -= (position - other.position).normalized() * 10;
     }
     return super.onCollision(intersectionPoints, other);
   }

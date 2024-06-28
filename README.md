@@ -8,6 +8,13 @@ A flutter flame project that spawns a ball and have it bounce around the screen.
 
 ## Screenshots
 
+<img width="659" alt="image" src="https://github.com/rirjkl19/codev_ball/assets/20448341/de83396e-5fe4-4b8d-97dc-76cae4c73437">
+
+
+https://github.com/rirjkl19/codev_ball/assets/20448341/a833d5d1-3f8a-4844-a220-76d2877f0b16
+
+
+
 ## Criteria
 
 ### Screen Interaction
